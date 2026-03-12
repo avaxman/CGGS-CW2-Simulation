@@ -28,7 +28,7 @@ double max_sparse(const Eigen::SparseMatrix<double>& mat, int &rowIndex, int &co
             }
                         
             if (abs(it.value())>maxValue){
-                maxValue = it.value();
+                maxValue = abs(it.value());
                 rowIndex  = it.row();
                 colIndex = it.col();
             }
